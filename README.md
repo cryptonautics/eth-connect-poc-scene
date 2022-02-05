@@ -46,9 +46,7 @@ Tested using NodeJS version 14.17.0 on 2022-02-05.
 
 To list currently installed NodeJS versions:
 
-```
-nvm list
-```
+`nvm list`
 
 To list availalbe NodeJS versions:
 
