@@ -63,18 +63,23 @@ nvm use 17.4.0
 --------------------
 
 PS C:\Users\cryptonaut\Documents\RoadToWeb3\DCLScenes\eth-connect-poc-scene> nvm version
+
 1.1.9
 
 PS C:\Users\cryptonaut\Documents\RoadToWeb3\DCLScenes\eth-connect-poc-scene> nvm list
 
   * 17.4.0 (Currently using 64-bit executable)
+  
     16.13.2
+	
     14.17.0
 	
 PS C:\Users\cryptonaut\Documents\RoadToWeb3\DCLScenes\eth-connect-poc-scene> npm --version
+
 8.3.1
 
 PS C:\Users\cryptonaut\Documents\RoadToWeb3\DCLScenes\eth-connect-poc-scene> node --version
+
 v17.4.0
 
 --------------------
