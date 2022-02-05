@@ -7,6 +7,7 @@ PoC Decentraland scene using DCL eth-connect library to read, write, and render 
 Know depdendencies:
 
 npm
+
 node >= 14
 
 --------------------
@@ -18,6 +19,7 @@ Environment:
 Windows 10 Pro
 
 All commands issued in PowerShell (x64) as a Windows Standard user in an elevated (Windows administrator user) PowerShell (x64) session
+
 (Right click on "Windows PowerShell" (C:\Users\<standard_user_username>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell) and click "Run as administrator" and enter your Windows Administrator user's password)
 
 Software:
@@ -25,13 +27,17 @@ Software:
 NodeJS management on Windows 10 using nvm-windows:
 
 To install nvm-windows browse to "https://github.com/coreybutler/nvm-windows/releases" and download "nvm-setup.zip" for the latest realesed version of the software.
+
 Extract "nvm-setup.zip" and run "nvm-setup.exe". If you are running as a Windows Standard user you will be prompted to enter your Windows Administrator user's password.
+
 Accept the default settings for the installation configuration options for the setup wizard.
 
 To cleanse existing NodeJS installations on Windows 10:
 
 Uninstall any existing versions of NodeJS using the Windows "Add or remove programs" wizard
+
 Delete any existing NodeJS installation directories (e.g. C:\Program Files\nodejs)
+
 Delete existing npm install locations (e.g. C:\Users\<user>\AppData\Roaming\npm)
 
 --------------------
@@ -39,15 +45,19 @@ Delete existing npm install locations (e.g. C:\Users\<user>\AppData\Roaming\npm)
 Tested using NodeJS version 14.17.0 on 2022-02-05.
 
 To list currently installed NodeJS versions:
+
 nvm list
 
 To list availalbe NodeJS versions:
+
 nvm list availalbe
 
 To install NodeJS version 17.4.0:
+
 nvm install 14.17.0
 
 To change activated NodeJS to version 17.4.0:
+
 nvm use 17.4.0
 
 --------------------
@@ -72,19 +82,23 @@ v17.4.0
 DCL intial instllation (run once per NodeJS version):
 
 Run:
+
 npm i -g decentraland
 
 --------------------
 
 To update to the latest Decentraland SDK release (run once per NodeJS version):
+
 npm i -g decentraland@latest
 
 --------------------
 
 Change directory to your cloned git repo directory (<cloned_repo_dir>)
+
 cd <cloned_scene_repo_dir>
 
 Then run:
+
 dcl start --web3
 
 --------------------
