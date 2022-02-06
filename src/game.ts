@@ -1,3 +1,51 @@
+import { getProvider } from "@decentraland/web3-provider"
+import { getUserAccount } from "@decentraland/EthereumController"
+import { RequestManager, ContractFactory } from "eth-connect"
+
+import abi from "../contracts/mana"
+
+
+executeTask(async () => {
+
+  try {
+    // Setup steps explained in the section above
+    const provider = await getProvider()
+    const requestManager = new RequestManager(provider)
+    const factory = new ContractFactory(requestManager, abi)
+    const contract = (await factory.at(
+      "0x2a8fd99c19271f4f04b1b7b9c4f7cf264b626edb"
+    )) as any
+    const playerAddress = await getUserAccount()
+    log(playerAddress)
+
+    // Perform a function from the contract
+    const res = await contract.setBalance(
+      "0xaFA48Fad27C7cAB28dC6E970E4BFda7F7c8D60Fb",
+      100,
+      {
+        from: playerAddress,
+      }
+    )
+
+    // Log response
+    log(res)
+  } catch (error) {
+    
+    let errorMessage = "Failed to do something exceptional... failure to launch :`("
+    if (error instanceof Error) {
+      errorMessage = error.message
+    }
+    log(errorMessage)
+  
+  }
+})
+
+
+
+
+
+
+
 ///////////////////////////////////////////////
 // entity ("Manifest Metaverse Metaphysics...")
 ///////////////////////////////////////////////
